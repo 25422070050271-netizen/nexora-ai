@@ -1,2 +1,0 @@
--- Datos de ejemplo seguros para desarrollo local.
--- Los perfiles reales se crean automáticamente al registrarse un usuario.

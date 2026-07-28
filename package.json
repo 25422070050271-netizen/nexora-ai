@@ -1,32 +1,60 @@
 {
-  "name": "nexora-ai",
+  "name": "lynk-esim",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate:dev": "prisma migrate dev",
+    "prisma:studio": "prisma studio",
+    "db:seed": "prisma db seed",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
   },
   "dependencies": {
-    "@supabase/ssr": "^0.5.2",
-    "@supabase/supabase-js": "^2.49.1",
-    "lucide-react": "^0.468.0",
+    "@auth/prisma-adapter": "^2.10.0",
+    "@hookform/resolvers": "^3.9.1",
+    "@prisma/client": "^5.21.1",
+    "@tanstack/react-query": "^5.62.7",
+    "bcryptjs": "^2.4.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.539.0",
     "next": "15.1.4",
-    "openai": "^4.77.3",
+    "next-auth": "^5.0.0-beta.25",
     "react": "19.0.0",
     "react-dom": "19.0.0",
+    "react-hook-form": "^7.53.2",
+    "stripe": "^17.5.0",
+    "tailwind-merge": "^2.5.5",
     "zod": "^3.24.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.50.1",
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitest/coverage-v8": "^2.1.5",
     "autoprefixer": "^10.4.20",
     "eslint": "^9",
     "eslint-config-next": "15.1.4",
     "postcss": "^8.4.49",
+    "prettier": "^3.4.2",
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "prisma": "^5.21.1",
     "tailwindcss": "^3.4.17",
-    "typescript": "^5"
+    "tsx": "^4.19.2",
+    "typescript": "^5",
+    "vitest": "^2.1.5"
   }
 }

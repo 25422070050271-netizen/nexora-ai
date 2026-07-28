@@ -1,10 +1,16 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: ["./app/**/*.{js,ts,jsx,tsx,mdx}", "./components/**/*.{js,ts,jsx,tsx,mdx}"],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
-      boxShadow: { glow: "0 20px 80px rgba(79, 70, 229, 0.28)" },
+      colors: {
+        surface: "#0f1115",
+        emerald: {
+          500: "#10b981",
+          600: "#059669",
+        },
+      },
     },
   },
   plugins: [],
